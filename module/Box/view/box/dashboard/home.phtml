@@ -1,0 +1,19 @@
+<?php
+$modules = array(
+    array(
+        "title" => "Simulate GET request",
+        "desc"  => "Simulate a GET request with parameters, the request can be done on any HTTP address.",
+        "link"  => "/box/get-simulator/dashboard",
+    ),
+);
+?>
+<div class="row">
+
+    <?php foreach ($modules as $ix => $mod) : ?>
+        <div class="span4">
+            <h2><?php echo $mod["title"]; ?></h2>
+            <p><?php echo $mod["desc"]; ?></p>
+            <p><a class="btn btn-success" href="<?php echo $mod['link']; ?>" target="_blank"><?php echo $this->translate("Go to module dashboard") ?> &raquo;</a></p>
+        </div>
+    <?php endforeach; ?>
+</div>
