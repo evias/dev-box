@@ -56,7 +56,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Box\Controller\Dashboard' => 'Box\Controller\DashboardController'
+            'Box\Controller\Dashboard'      => 'Box\Controller\DashboardController',
+            'Box\Controller\GetSimulator'   => 'Box\Controller\GetSimulatorController',
         ),
     ),
     'view_manager' => array(

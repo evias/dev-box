@@ -15,12 +15,12 @@
 namespace Box\Controller;
 
 use core\mvc\AbstractController;
-use Zend\Mvc\ViewModel;
+use Zend\View\Model\ViewModel;
 
-class DashboardController
+class GetSimulatorController
     extends AbstractController
 {
-    public function homeAction()
+    public function dashboardAction()
     {
         return new ViewModel();
     }
