@@ -15,7 +15,7 @@
 namespace Box\Controller;
 
 use core\mvc\AbstractController;
-use Zend\View\Model\ViewModel;
+use Zend\Mvc\ViewModel;
 
 class DashboardController
     extends AbstractController

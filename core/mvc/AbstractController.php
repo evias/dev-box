@@ -8,12 +8,10 @@ namespace core\mvc;
 /* Dependencies: */
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\Mvc\Controller\PluginBroker;
-use Zend\Loader\Pluggable;
 use Zend\Loader\Broker;
 
 abstract class AbstractController
     extends AbstractActionController
-    implements Pluggable
 {
     /**
      *  PluginBroker setter method
