@@ -12,6 +12,12 @@ in this toolbox. Example tool modules include:
     - XML/RPC request handler
     - More to come..
 
+Unitary testing
+---------------
+Every unit of the dev-box should be covered by a unitary test. A unit is, intuitively,
+the smallest testable part of an application. Test cases should be independent from others
+while base data structures may be defined and PHPUnit' dataProvider feature HAS TO BE used.
+
 Installation
 ------------
 
