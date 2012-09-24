@@ -80,8 +80,8 @@ return array(
         'exception_template'       => 'error/index',
         'template_map' => array(
             'layout/layout'           => __DIR__ . '/../../common/layout.phtml',
-            'error/404'               => __DIR__ . '/../view/error/404.phtml',
-            'error/index'             => __DIR__ . '/../view/error/index.phtml',
+            'error/404'               => __DIR__ . '/../../common/error/404.phtml',
+            'error/index'             => __DIR__ . '/../../common/error/index.phtml',
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
