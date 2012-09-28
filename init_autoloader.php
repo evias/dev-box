@@ -20,3 +20,10 @@ if (file_exists('vendor/autoload.php')) {
 if (!class_exists('Zend\Loader\AutoloaderFactory')) {
     throw new RuntimeException('Unable to load ZF2. Run `php composer.phar install` or define a ZF2_PATH environment variable.');
 }
+
+$loader = new Zend\Loader\StandardAutoloader( array(
+    "namespaces" => array(
+        "core"  => __DIR__ . "/core",),
+    "fallback_autoloader" => false));
+$loader->register();
+

@@ -10,16 +10,6 @@
 return array(
     'router' => array(
         'routes' => array(
-            'dashboard' => array(
-                'type' => 'Zend\Mvc\Router\Http\Literal',
-                'options' => array(
-                    'route'    => '/',
-                    'defaults' => array(
-                        'controller' => 'Box\Controller\Dashboard',
-                        'action'     => 'home',
-                    ),
-                ),
-            ),
             'box' => array(
                 'type'    => 'Literal',
                 'options' => array(
@@ -66,7 +56,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Box\Controller\Dashboard' => 'Box\Controller\DashboardController'
+            'Box\Controller\Dashboard'      => 'Box\Controller\DashboardController',
+            'Box\Controller\GetSimulator'   => 'Box\Controller\GetSimulatorController',
         ),
     ),
     'view_manager' => array(
@@ -76,10 +67,9 @@ return array(
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => array(
-            'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-            'box/dashboard/home'      => __DIR__ . '/../view/box/dashboard/home.phtml',
-            'error/404'               => __DIR__ . '/../view/error/404.phtml',
-            'error/index'             => __DIR__ . '/../view/error/index.phtml',
+            'layout/layout'           => __DIR__ . '/../../common/layout.phtml',
+            'error/404'               => __DIR__ . '/../../common/error/404.phtml',
+            'error/index'             => __DIR__ . '/../../common/error/index.phtml',
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',

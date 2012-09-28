@@ -14,11 +14,11 @@
 
 namespace Box\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
+use core\mvc\AbstractController;
 use Zend\View\Model\ViewModel;
 
 class DashboardController
-    extends AbstractActionController
+    extends AbstractController
 {
     public function homeAction()
     {

@@ -9,16 +9,14 @@
 
 namespace Application;
 
-use Zend\Mvc\ModuleRouteListener;
+use core\mvc\AbstractModule;
 
 class Module
+    extends AbstractModule
 {
     public function onBootstrap($e)
     {
-        $e->getApplication()->getServiceManager()->get('translator');
-        $eventManager        = $e->getApplication()->getEventManager();
-        $moduleRouteListener = new ModuleRouteListener();
-        $moduleRouteListener->attach($eventManager);
+        parent::onBootstrap($e);
     }
 
     public function getConfig()
@@ -26,14 +24,15 @@ class Module
         return include __DIR__ . '/config/module.config.php';
     }
 
-    public function getAutoloaderConfig()
+    protected function getPaths()
     {
         return array(
-            'Zend\Loader\StandardAutoloader' => array(
-                'namespaces' => array(
-                    __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-                ),
-            ),
+            "namespace" => __DIR__ . '/src/' . __NAMESPACE__,
         );
+    }
+
+    protected function getNamespace()
+    {
+        return __NAMESPACE__;
     }
 }
