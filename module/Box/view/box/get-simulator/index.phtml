@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="span4">
+        <p>&nbsp;</p>
+        <p><a class="btn btn-success" href="" target="_blank">
+            <?php echo $this->translate("More settings"); ?>&raquo;</a>
+        </p>
+    </div>
+</div>
+
+<div class="module-container">
+    <frameset>
+    <form target="request_iframe" method="get" action="/box/get-simulator/process-request">
+        <legend><?php echo $this->translate("Parameters:"); ?></legend>
+
+        <p>
+        <input type="text" name="param_names[]" value="" />
+        <input type="text" name="param_values[]" value="" />
+        <button><?php echo $this->translate("Add parameter"); ?></button>
+
+        <label for="parameters"><?php echo $this->translate("Parameters:"); ?></label>
+        <select multiple="multiple" name="parameters">
+
+        </select>
+        </p>
+        <p>
+        <label for="url"><?php echo $this->translate("URL:"); ?></label>
+        <input type="text" name="url" value="" />
+        </p>
+        <p>
+        <input type="submit" name="do_request" value="<?php echo $this->translate("Simulate GET request"); ?>&raquo;" />
+        </p>
+    </form>
+    </frameset>
+<br />
+    <iframe id="request_iframe" width="600px" height="400px">
+    </iframe>
+
+</div>

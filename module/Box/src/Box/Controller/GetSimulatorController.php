@@ -20,7 +20,7 @@ use Zend\View\Model\ViewModel;
 class GetSimulatorController
     extends AbstractController
 {
-    public function dashboardAction()
+    public function indexAction()
     {
         return new ViewModel();
     }
